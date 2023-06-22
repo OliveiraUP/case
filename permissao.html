@@ -44,44 +44,44 @@
   </header>
 
   <main>
-    <section class="modal" id="modal">
-      <div class="modal-content">
-        <form class="modal-form form">
+    <section class="formulario" id="formulario">
+      <div class="formulario-content">
+        <form class="formulario-form form">
           <div class="form-header">
             <h1>Cadastro de Permissão</h1>
           </div>
           <div class="form-item">
             <label for="data-inicio">Data de Início<span>*</span></label>
-            <input type="date" id="data-inicio" name="data-inicio" class="modal-field" required>
+            <input type="date" id="data-inicio" name="data-inicio" class="formulario-field" required>
           </div>
           <div class="form-item">
             <label for="ano">Ano<span>*</span></label>
-            <input type="number" id="ano" name="ano" class="modal-field" min="1900" max="2100">
+            <input type="number" id="ano" name="ano" class="formulario-field" min="1900" max="2100">
           </div>
           <div class="form-item">
             <label for="serie">Série<span>*</span></label>
-            <select id="serie" name="serie" class="modal-field">
+            <select id="serie" name="serie" class="formulario-field">
               <option value="">Escolha uma série...</option>
-              <option value="1">1ª Ano</option>
-              <option value="2">2ª Ano</option>
-              <option value="3">3ª Ano</option>
-              <option value="prevest">Pré-Vestibular</option>
+              <option value="1ª Ano">1ª Ano</option>
+              <option value="2ª Ano">2ª Ano</option>
+              <option value="3ª Ano">3ª Ano</option>
+              <option value="Pré-Vestibular">Pré-Vestibular</option>
             </select>
           </div>
           <div class="form-item">
             <label for="duracao-permissao">Duração da Permissão<span>*</span></label>
-            <select id="duracao-permissao" name="duracao-permissao" class="modal-field">
+            <select id="duracao-permissao" name="duracao-permissao" class="formulario-field">
               <option value="">Escolha uma duração de permissão...</option>
-              <option value="1-mes">01 Mês</option>
-              <option value="3-mes">03 Meses</option>
-              <option value="6-mes">06 Meses</option>
-              <option value="9-mes">09 Meses</option>
-              <option value="12-mes">12 Meses</option>
+              <option value="01 Mês">01 Mês</option>
+              <option value="03 Meses">03 Meses</option>
+              <option value="06 Meses">06 Meses</option>
+              <option value="09 Meses">09 Meses</option>
+              <option value="12 Meses">12 Meses</option>
             </select>
           </div>
           <div class="form-item">
             <label for="escola">Escola<span>*</span></label>
-            <select id="escola" name="escola" class="modal-field">
+            <select id="escola" name="escola" class="formulario-field">
               <option value="">Escolha uma escola...</option>
               <option value="aprovazz">Aprovazz</option>
               <option value="bdm">Colégio BDM</option>
@@ -90,14 +90,13 @@
             </select>
           </div>
         </form>
-        <footer class="modal-footer">
+        <footer class="formulario-footer">
           <button class="button green">Salvar</button>
           <button class="button blue">Cancelar</button>
         </footer>
       </div>
     </section>
     <section class="table">
-      <!-- <button type="button" class="button blue mobile" id="cadastrarCliente">Cadastrar Cliente</button> -->
       <table class="records">
         <thead>
           <tr>

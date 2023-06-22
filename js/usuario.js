@@ -53,7 +53,7 @@ const deleteEscola = (index) => {
 
 //INTERAÇÃO COM O LAYOUT
 const clearFields = () => {
-  const fields = document.querySelectorAll(".modal-field");
+  const fields = document.querySelectorAll(".formulario-field");
   fields.forEach((field) => (field.value = ""));
   document.getElementById("nome").dataset.index = "new";
 };

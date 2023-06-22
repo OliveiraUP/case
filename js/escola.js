@@ -53,7 +53,7 @@ const deleteEscola = (index) => {
 
 //INTERAÇÃO COM O LAYOUT
 const clearFields = () => {
-  const fields = document.querySelectorAll(".modal-field");
+  const fields = document.querySelectorAll(".formulario-field");
   fields.forEach((field) => (field.value = ""));
   document.getElementById("nome").dataset.index = "new";
 };
@@ -91,7 +91,8 @@ const cancelaEscola = () => {
 
 const createRow = (escola, index) => {
   const newRow = document.createElement("tr");
-  newRow.innerHTML = `<td>${escola.nome}</td>
+  newRow.innerHTML = `<td>${index + 1}</td>
+  <td>${escola.nome}</td>
   <td>${escola.cidade}</td>
   <td>${escola.estado}</td>
   <td>

@@ -1,0 +1,85 @@
+.modal {
+  border-radius: 6px;
+  margin-top: 30px;
+  border: 1px solid #d5d5d5;
+}
+
+.form-header {
+  background-color: #e5e5e5;
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.form-item {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  padding: 0px 20px;
+}
+
+.form label {
+  font: 400 1rem/1.5 "Poppins", sans-serif;
+  margin-bottom: 4px;
+  margin-right: 10px;
+  /* margin-left: 60px; */
+  justify-self: end;
+  text-align: center;
+}
+
+.form input,
+.form select {
+  margin-bottom: 30px;
+}
+
+.form input[type="text"],
+.form input[type="email"],
+.form input[type="number"],
+.form input[type="date"],
+.form select,
+.form textarea {
+  font: 400 1rem/1.5 "Roboto", sans-serif;
+  background: #fff;
+  border: 1px solid #ccc;
+  padding: 2px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.form input[type="text"]:focus,
+.form input[type="email"]:focus,
+.form input[type="number"]:focus,
+.form input[type="date"]:focus,
+.form select:focus,
+.form textarea:focus {
+  outline: none;
+  border-color: var(--cor-p1);
+  background: var(--cor-0);
+  box-shadow: 0 0 0 2px #6090ff;
+}
+
+.form select {
+  padding: 6px;
+}
+
+.modal-footer {
+  display: flex;
+  gap: 20px;
+  padding: 30px;
+  justify-content: center;
+}
+
+.form span {
+  color: red;
+}
+
+@media (max-width: 700px) {
+  .form-item {
+    grid-template-columns: 1fr;
+  }
+  .form label {
+    justify-self: start;
+    text-align: center;
+  }
+}

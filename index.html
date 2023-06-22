@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <title>Escola</title>
+</head>
+
+<body>
+  <header class="expandir">
+    <nav class="menu-lateral expandir">
+      <div class="btn-expandir" id="btn-exp">
+        <i class="bi bi-list"></i>
+      </div>
+      <ul>
+        <div class="menu-item">
+          <i class="bi bi-person-circle"></i>
+          <span>Administração</span>
+        </div>
+        <li class="item-menu">
+          <a href="./index.html">
+            <i class="bi bi-houses"></i>
+            <span class="txt-link">Escola</span>
+          </a>
+        </li>
+        <li class="item-menu">
+          <a href="./permissao.html">
+            <i class="bi bi-check-square"></i>
+            <span class="txt-link">Permissão</span>
+          </a>
+        </li>
+        <li class="item-menu">
+          <a href="./usuario.html">
+            <i class="bi bi-person-lines-fill"></i>
+            <span class="txt-link">Usuário</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <section class="modal" id="modal">
+      <div class="modal-content">
+        <form id="form" class="modal-form form">
+          <div class="form-header">
+            <h1>Cadastro de Escola</h1>
+          </div>
+          <div class="form-item">
+            <label for="nome">Nome<span>*</span></label>
+            <input type="text" id="nome" data-index="new" name="nome" class="modal-field" required>
+          </div>
+          <div class="form-item">
+            <label for="cidade">Cidade<span>*</span></label>
+            <input type="text" id="cidade" name="cidade" class="modal-field" required>
+          </div>
+          <div class="form-item">
+            <label for="estado">Estado<span>*</span></label>
+            <select id="estado" name="estado" class="modal-field">
+              <option value="">Escolha um estado...</option>
+              <option value="Acre">Acre</option>
+              <option value="Alagoas">Alagoas</option>
+              <option value="Amapá">Amapá</option>
+              <option value="Amazonas">Amazonas</option>
+              <option value="Bahia">Bahia</option>
+              <option value="Ceará">Ceará</option>
+              <option value="Distrito Federal">Distrito Federal</option>
+              <option value="Espírito Santo">Espírito Santo</option>
+              <option value="Goiás">Goiás</option>
+              <option value="Maranhão">Maranhão</option>
+              <option value="Mato Grosso">Mato Grosso</option>
+              <option value="Mato Grosso do Sul">Mato Grosso do Sul</option>
+              <option value="Minas Gerais">Minas Gerais</option>
+              <option value="Pará">Pará</option>
+              <option value="Paraíba">Paraíba</option>
+              <option value="Paraná">Paraná</option>
+              <option value="Pernambuco">Pernambuco</option>
+              <option value="Piauí">Piauí</option>
+              <option value="Rio de Janeiro">Rio de Janeiro</option>
+              <option value="Rio Grande do Norte">Rio Grande do Norte</option>
+              <option value="Rio Grande do Sul">Rio Grande do Sul</option>
+              <option value="Rondônia">Rondônia</option>
+              <option value="Roraima">Roraima</option>
+              <option value="Santa Catarina">Santa Catarina</option>
+              <option value="São Paulo">São Paulo</option>
+              <option value="Sergipe">Sergipe</option>
+              <option value="Tocantins">Tocantins</option>
+            </select>
+          </div>
+      </div>
+      </form>
+      <footer class="modal-footer">
+        <button id="salvar" class="button green">Salvar</button>
+        <button id="cancelar" class="button blue">Cancelar</button>
+      </footer>
+      </div>
+    </section>
+    <section class="table">
+      <table id="tableEscola" class="records">
+        <thead>
+          <tr>
+            <th>Nome</th>
+            <th>Cidade</th>
+            <th>Estado</th>
+            <th>Ação</th>
+          </tr>
+        </thead>
+        <tbody>
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+
+  <script src="./js/escola.js"></script>
+</body>
+
+</html>

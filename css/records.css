@@ -42,8 +42,10 @@
 }
 
 .records td {
-  padding: 6px;
-  border: 1px solid #d5d5d5;
+  padding: 0px 6px;
+  border: 1px solid #bbb;
+  border-left: none;
+  border-right: none;
   word-break: break-word;
   max-width: 300px;
 }
@@ -58,13 +60,17 @@
   box-sizing: border-box;
 }
 
-.records td:last-child button {
-  margin-right: 10px;
-  margin: 5px;
+.records td:last-child {
+  border-right: 1px solid #bbb;
 }
 
-.records tr {
-  border-radius: 6px;
+.records td:first-child {
+  border-left: 1px solid #bbb;
+}
+
+.records td:last-child button {
+  margin-right: 10px;
+  margin: 4px;
 }
 
 @media (max-width: 750px) {

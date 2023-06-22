@@ -22,3 +22,19 @@ main {
   margin: 0 auto;
   width: 76%;
 }
+
+
+.header {
+  background-color: #efeffa;
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+.header h1 {
+  font-family: Arial;
+  color: #222;
+  font-weight: 400;
+}

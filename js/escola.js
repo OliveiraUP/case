@@ -63,7 +63,7 @@ const isValidFields = () => {
 };
 
 const saveEscola = () => {
-  const h1 = document.querySelector(".form-header h1");
+  const h1 = document.querySelector(".header h1");
   h1.innerHTML = "Cadastro de Escola";
   if (isValidFields()) {
     const escola = {
@@ -86,16 +86,18 @@ const saveEscola = () => {
 };
 
 const cancelaEscola = () => {
+  const h1 = document.querySelector(".header h1");
+  h1.innerHTML = "Cadastro de Escola";
   clearFields();
 };
 
 const createRow = (escola, index) => {
   const newRow = document.createElement("tr");
-  newRow.innerHTML = `<td>${index + 1}</td>
-  <td>${escola.nome}</td>
-  <td>${escola.cidade}</td>
-  <td>${escola.estado}</td>
-  <td>
+  newRow.innerHTML = `<td data-label="#:">${index + 1}</td>
+    <td data-label="Nome:">${escola.nome}</td>
+    <td data-label="Cidade:">${escola.cidade}</td>
+    <td data-label="Estado:">${escola.estado}</td>
+    <td data-label="Ação:">
     <button type="button" class="button green" id="edit-${index}">Editar</button>
     <button type="button" class="button red" id="delete-${index}">Excluir</button>
   </td>`;
@@ -121,7 +123,7 @@ const fillFields = (escola) => {
 };
 
 const editEscola = (index) => {
-  const h1 = document.querySelector(".form-header h1");
+  const h1 = document.querySelector(".header h1");
   h1.innerHTML = "Alterando Escola #" + (Number(index) + 1);
   const escola = readEscola()[index];
   escola.index = index;

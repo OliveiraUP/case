@@ -109,27 +109,10 @@ const clearTable = () => {
   rows.forEach((row) => row.parentNode.removeChild(row));
 };
 
-const updateTable = async () => {
-  try {
-    const response = await fetch(
-      "http://18.233.181.140:8000/hmlg/gestao/escola/todos"
-    );
-    if (!response.ok) {
-      throw new Error("Erro ao obter os dados das escolas.");
-    }
-    const data = await response.json();
-    clearTable();
-    data.forEach((item, index) => {
-      const escola = {
-        nome: item.nome,
-        cidade: item.cidade,
-        estado: item.uf,
-      };
-      createRow(escola, index);
-    });
-  } catch (error) {
-    console.error(error);
-  }
+const updateTable = () => {
+  const dbEscola = readEscola();
+  clearTable();
+  dbEscola.forEach(createRow);
 };
 
 const fillFields = (escola) => {
@@ -175,7 +158,3 @@ document.getElementById("cancelar").addEventListener("click", cancelaEscola);
 document
   .querySelector("#tableEscola>tbody")
   .addEventListener("click", editDelete);
-
-window.addEventListener("load", function () {
-  updateTable();
-});
